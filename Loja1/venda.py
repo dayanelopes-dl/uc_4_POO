@@ -9,15 +9,15 @@ class Venda:
             print("Quantidade é invalida")
             return
 
-        if self.quantidade > self.produto.quantidade:
+        if self.quantidade > self.produto.estoque:
             print("Venda não realizada. estoque insuficiente")
             return
 
         total = self.produto.preco * self.quantidade
-        self.produto.retirar_unidade(self.quantidade)
+        self.produto.retirar_estoque(self.quantidade)
 
         print("\n Venda finalizada")
         print(f"Cliente: {self.cliente.nome}")
-        print(f"produto: {self.produto.nome}")
+        print(f"produto: {self.produto.descricao}")
         print(f"Quantidade: {self.quantidade}")
         print(f"total: R$ {total:2f}")

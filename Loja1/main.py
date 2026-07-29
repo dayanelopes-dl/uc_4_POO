@@ -11,7 +11,7 @@ def main():
     
     produto1 = Produto("CAM-006", 
                     "Camisa Unissex",
-                        49.50,
+                        10.00,
                         10)
     venda1 = Venda(
         cliente1,
